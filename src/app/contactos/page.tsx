@@ -67,19 +67,19 @@ const ContactsPage = () => {
             transition={{ type: "spring", stiffness: 100 }}
           >
             <a
-              href="https://www.facebook.com/p/Carrera-de-Enfermer%C3%ADa-UPEA-100086547786790/?locale=es_LA"
+              href="https://www.facebook.com/profile.php?id=100083148521221&locale=es_LA"
               target="_blank"
             >
               <FontAwesomeIcon icon={faFacebook} className="text-blue-600" />
             </a>
             <a
-              href="https://api.whatsapp.com/send?phone=59177775964"
+              href="https://api.whatsapp.com/send?phone=59171932405"
               target="_blank"
             >
               <FontAwesomeIcon icon={faWhatsapp} className="text-green-600" />
             </a>
             <a
-              href="https://www.tiktok.com/@enfermeria.sede.caranavi"
+              href="https://www.tiktok.com/@medicinaveterina_upea"
               target="_blank"
             >
               <FontAwesomeIcon icon={faTiktok} className="text-gray-600" />

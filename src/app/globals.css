@@ -14,9 +14,9 @@
   }
 }
 
-body * {
+/* body * {
   border: solid 1px red;
-}
+} */
 
 body {
   color: var(--foreground);

@@ -58,12 +58,12 @@ const Footer = () => {
             </a>
             <div className="mt-6 text-sm">
               <a
-                href="https://www.google.com/maps/place/Carrera+de+Enfermer%C3%ADa+-+UPEA/@-16.4893164,-68.1931985,17z/data=!3m1!4b1!4m6!3m5!1s0x915edf2ef2781625:0x50e28825b5c88bcc!8m2!3d-16.4893164!4d-68.1931985!16s%2Fg%2F11gmzvxy2x?entry=ttu&g_ep=EgoyMDI1MDIxOC4wIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/place/Universidad+P%C3%BAblica+de+El+Alto/@-16.4921601,-68.1957242,16.85z/data=!4m6!3m5!1s0x915ede3378ea9d6d:0x26cac4a2caefcb29!8m2!3d-16.4918116!4d-68.1937045!16s%2Fg%2F12301wft?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 className="hover:text-cyan-500"
               >
                 <FontAwesomeIcon icon={faLocationDot} /> Av. Sucre Z. Villa
-                Esperanza, Campus Upea Bloque B Piso 3
+                Esperanza,Upea Bloque B Piso 3
               </a>
               <br />
               <a
@@ -109,7 +109,7 @@ const Footer = () => {
             </a>
             <div className="text-sm mt-6">
               <a
-                href="https://www.google.com/maps/place/Clinica+veterinaria+UPEA/@-16.4900806,-68.1930328,18.27z/data=!4m6!3m5!1s0x915edf5aae3844ff:0xacd0c8b585b62247!8m2!3d-16.4907363!4d-68.1930543!16s%2Fg%2F11h2fhjgfp?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/place/Edificio+Tecnol%C3%B3gico+Torre+A+(Carrera+de+Ingenier%C3%ADa+de+Sistemas)/@-16.493577,-68.1944837,17.57z/data=!4m14!1m7!3m6!1s0x915edf2ef2781625:0x50e28825b5c88bcc!2sCarrera+de+Enfermer%C3%ADa+-+UPEA!8m2!3d-16.4893164!4d-68.1931985!16s%2Fg%2F11gmzvxy2x!3m5!1s0x915edf53a9c8ea57:0x1a3fe3118e4703f8!8m2!3d-16.4933015!4d-68.1937855!16s%2Fg%2F11l22gx212?entry=ttu&g_ep=EgoyMDI1MDIxOC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 className="hover:text-cyan-500"
               >

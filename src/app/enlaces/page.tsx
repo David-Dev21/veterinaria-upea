@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const LinksPage = () => {
   return (
-    <section className="max-w-screen-2xl mt-24 mx-auto px-4 md:px-10">
+    <section className="max-w-screen-2xl my-24 mx-auto px-4 md:px-10">
       <Header title="Enlaces">
         <FontAwesomeIcon icon={faLink} className="text-secondary" />
       </Header>
@@ -65,7 +65,7 @@ const LinksPage = () => {
         >
           <div className="p-3 text-center">
             <a
-              href="https://biblioteca.upea.bo/cgi-bin/koha/opac-search.pl?idx=ti&q=enfermeria&weight_search=1"
+              href="https://biblioteca.upea.bo/cgi-bin/koha/opac-detail.pl?biblionumber=126"
               target="_blank"
             >
               <img src="/images/upea.png" alt="upea" className="w-28 mx-auto" />
