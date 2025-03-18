@@ -9,6 +9,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import LoadingSpinner from "@/components/LoadingSpinner";
 
+/**
+ * Componente para mostrar una lista de autoridades.
+ * Realiza una solicitud a la API para obtener las autoridades y las muestra en una cuadrícula.
+ * Muestra un componente de carga mientras se obtienen los datos y un mensaje de error si ocurre un problema.
+ */
 const AuthoritiesPage = () => {
   const [autoridades, setAutoridades] = useState<Authority[]>([]);
   const [loading, setLoading] = useState<boolean>(true);

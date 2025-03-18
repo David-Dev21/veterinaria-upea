@@ -1,3 +1,10 @@
+interface FlipOptions {
+    axis?: 'x' | 'y';
+    reverse?: boolean;
+    trigger?: string;
+    speed?: number;
+}
+
 interface JQuery {
-    flip(options?: any): JQuery;
+    flip(options?: FlipOptions): JQuery;
 }

@@ -6,7 +6,6 @@ import {
   faFacebook,
   faTiktok,
   faWhatsapp,
-  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faAddressBook,
@@ -16,10 +15,13 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+/**
+ * Componente para mostrar la página de contactos.
+ * Incluye información de contacto, horarios de atención y enlaces a redes sociales.
+ */
 const ContactsPage = () => {
   return (
-    <section className="max-w-screen-xl mt-24 mx-auto px-4 md:px-10">
+    <section className="max-w-screen-xl h-full pt-24 flex flex-col justify-center mx-auto px-4 md:px-10">
       <Header title="Contactate con Nosotros">
         <FontAwesomeIcon icon={faIdCardClip} className="text-secondary" />
       </Header>
@@ -28,7 +30,7 @@ const ContactsPage = () => {
           className="w-full text-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 2 }}
         >
           <Card className="w-2/3 mx-auto">
             <CardContent className="text-primary hover:text-secondary">
@@ -54,8 +56,13 @@ const ContactsPage = () => {
                 </p>
                 <p></p>
                 <p>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  institutoagronomia@gmail.com
+                  <a
+                    href="mailto:institutoagronomia@gmail.com"
+                    className="text-gray-600 hover:text-secondary"
+                  >
+                    <FontAwesomeIcon icon={faEnvelope} />
+                    institutoagronomia@gmail.com
+                  </a>
                 </p>
               </div>
             </CardContent>
@@ -70,19 +77,28 @@ const ContactsPage = () => {
               href="https://www.facebook.com/profile.php?id=100083148521221&locale=es_LA"
               target="_blank"
             >
-              <FontAwesomeIcon icon={faFacebook} className="text-blue-600" />
+              <FontAwesomeIcon
+                icon={faFacebook}
+                className="text-blue-600 text-2xl p-3 rounded-full transition-all duration-300 hover:bg-blue-600 hover:text-white hover:scale-125"
+              />
             </a>
             <a
               href="https://api.whatsapp.com/send?phone=59171932405"
               target="_blank"
             >
-              <FontAwesomeIcon icon={faWhatsapp} className="text-green-600" />
+              <FontAwesomeIcon
+                icon={faWhatsapp}
+                className="text-green-600 text-2xl p-3 rounded-full transition-all duration-300 hover:bg-green-600 hover:text-white hover:scale-125"
+              />
             </a>
             <a
               href="https://www.tiktok.com/@medicinaveterina_upea"
               target="_blank"
             >
-              <FontAwesomeIcon icon={faTiktok} className="text-gray-600" />
+              <FontAwesomeIcon
+                icon={faTiktok}
+                className="text-gray-600 text-2xl p-3 rounded-full transition-all duration-300 hover:bg-gray-600 hover:text-white hover:scale-125"
+              />
             </a>
           </motion.div>
         </motion.div>

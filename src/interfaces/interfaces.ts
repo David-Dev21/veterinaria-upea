@@ -27,7 +27,7 @@ export interface Announcement {
     con_estado: string;
     con_fecha_inicio: Date;
     con_fecha_fin: Date;
-    tipo_conv_comun: any[];
+    tipo_conv_comun: TypeAnnouncemet[];
 }
 
 export interface Courses {
@@ -50,6 +50,46 @@ export interface Courses {
     det_version: string;
     det_estado: string;
     idtipo_curso_otros: number;
-    tipo_curso_otro: any[];
-    facilitadores: any[];
+    tipo_curso_otro: TypeCourse[];
+    facilitadores: Facilitator[];
+}
+
+export interface Video {
+    video_id: number;
+    video_enlace: string;
+    video_titulo: string;
+    video_breve_descripcion: string;
+    video_tipo: string;
+    video_estado: number;
+}
+
+export interface Gaceta {
+  gaceta_id: number;
+  gaceta_titulo: string;
+  gaceta_fecha: string;
+  gaceta_estado: number;
+  gaceta_tipo: string | null;
+  gaceta_documento: string;
+}
+
+export interface TypeAnnouncemet {
+    idtipo_conv_comun: number;
+    tipo_conv_comun_titulo: string;
+    tipo_conv_comun_estado: string;
+}
+
+export interface TypeCourse {
+    idtipo_curso_otros: number;
+    tipo_conv_curso_nombre: string;
+    tipo_conv_curso_estado: string;
+}
+
+export interface Facilitator {
+    id_facilitador: number;
+    foto_facilitador: string;
+    nombre_facilitador: string;
+    cargo_facilitador: string;
+    facebook_facilitador: string;
+    celular_facilitador: string;
+    descripcion_facilitador: string;
 }

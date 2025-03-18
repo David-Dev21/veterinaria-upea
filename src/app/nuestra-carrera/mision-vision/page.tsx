@@ -1,6 +1,9 @@
 import { faFlag, faRocket } from "@fortawesome/free-solid-svg-icons";
-import FlipCard from "@/components/FlipCard"; // Ajusta la ruta si es necesario
+import FlipCard from "@/components/FlipCard";
 
+/**
+ * Componente para mostrar la misión y visión de la carrera de enfermería.
+ */
 const MissionVisionPage = () => {
   return (
     <section className="max-w-screen-lg mx-auto mt-12 md:mt-20 px-4 md:px-6">

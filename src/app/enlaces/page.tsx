@@ -3,10 +3,14 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import Image from "next/image";
+/**
+ * Componente para mostrar una lista de enlaces importantes.
+ * Los enlaces se muestran en una cuadrícula y cada uno tiene una animación de aparición.
+ */
 const LinksPage = () => {
   return (
-    <section className="max-w-screen-2xl my-24 mx-auto px-4 md:px-10">
+    <section className="max-w-screen-2xl h-full pt-24 mx-auto px-6 md:px-10">
       <Header title="Enlaces">
         <FontAwesomeIcon icon={faLink} className="text-secondary" />
       </Header>
@@ -19,7 +23,14 @@ const LinksPage = () => {
         >
           <div className="p-3 text-center">
             <a href="https://matriculacion.upea.bo/" target="_blank">
-              <img src="/images/mae.png" alt="m@e" />
+              <div className="relative w-full h-40">
+                <Image
+                  src="/images/mae.png"
+                  alt="m@e"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
               <p className="text-lg text-white">
                 M@e es el sistema de matriculación académica de la UPEA.
               </p>
@@ -34,9 +45,16 @@ const LinksPage = () => {
         >
           <div className="p-3 text-center">
             <a href="https://inscripciones.upea.bo/" target="_blank">
-              <img src="/images/inscripciones.png" alt="inscripciones" />
+              <div className="relative w-full h-40">
+                <Image
+                  src="/images/inscripciones.png"
+                  alt="inscripciones"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
               <p className="text-lg text-white">
-                Sistema de inscripciones para estudiantes antiguos
+                Sistema de inscripciones para estudiantes antiguos ENFERMERIA
               </p>
             </a>
           </div>
@@ -49,8 +67,15 @@ const LinksPage = () => {
         >
           <div className="p-3 text-center">
             <a href="https://virtualveterinaria.upea.bo/" target="_blank">
-              <img src="/images/moodle.png" alt="moodle" />
-              <p className="text-lg">
+              <div className="relative w-full h-40">
+                <Image
+                  src="/images/moodle.png"
+                  alt="moodle"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <p className="text-lg text-white">
                 El Campus Virtual es la plataforma de aprendizaje en línea de la
                 UPEA.
               </p>
@@ -68,8 +93,15 @@ const LinksPage = () => {
               href="https://biblioteca.upea.bo/cgi-bin/koha/opac-detail.pl?biblionumber=126"
               target="_blank"
             >
-              <img src="/images/upea.png" alt="upea" className="w-28 mx-auto" />
-              <p className="text-lg">
+              <div className="relative w-full h-40">
+                <Image
+                  src="/images/upea.png"
+                  alt="upea"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <p className="text-lg text-white">
                 La Biblioteca Virtual de la Upea es una colección de recursos
                 digitales accesibles en línea.
               </p>

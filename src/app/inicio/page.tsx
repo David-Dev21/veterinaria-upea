@@ -1,106 +1,103 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import PublicationsPage from './publicaciones/page';
+"use client";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import PublicationsPage from "./publicaciones/page";
+import VideosPage from "./videos/page";
+import Image from "next/image";
+import PawPrintsAnimation from "@/components/Animation";
 
-// Constantes para centralizar valores repetidos
 const images = [
-    "/images/veterinaria-1.jpg",
-    "/images/veterinaria-2.jpg",
-    "/images/veterinaria-3.jpg"
+  "/images/veterinaria-1.jpg",
+  "/images/veterinaria-2.jpg",
+  "/images/veterinaria-3.jpg",
 ];
 
+/**
+ * Componente principal de la página de inicio.
+ * Muestra una animación de bienvenida, un carrusel de imágenes y secciones de publicaciones y videos.
+ */
 const Welcome = () => {
-    const [currentImage, setCurrentImage] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-        }, 5000); // Cambiar imagen cada 5 segundos
-        return () => clearInterval(interval);
-    }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
-    const imageVariants = {
-        initial: { opacity: 0 },
-        animate: { opacity: 1, transition: { duration: 1 } },
-        exit: { opacity: 0, transition: { duration: 1 } }
-    };
+  const variants = {
+    enter: {
+      scale: 0.8,
+      opacity: 0,
+    },
+    center: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 2,
+      },
+    },
+    exit: {
+      scale: 1.2,
+      opacity: 0,
+      transition: {
+        duration: 2,
+      },
+    },
+  };
 
-    const textVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-    };
-
-    return (
-        <>
-            {/* Fondo gradiente */}
-            <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-br from-primary via-secondary to-white"></div>
-
-            {/* Contenido principal */}
-            <section className="max-w-screen-xl mx-auto mt-12 md:mt-24 px-4 md:px-10 py-16">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Texto de bienvenida */}
-                    <motion.div
-                        className="text-center lg:text-left relative z-10"
-                        initial="hidden"
-                        animate="visible"
-                        variants={{
-                            hidden: { opacity: 0 },
-                            visible: {
-                                opacity: 1,
-                                transition: {
-                                    staggerChildren: 0.3, // Retraso escalonado entre elementos hijos
-                                    delayChildren: 0.3 // Retraso inicial antes de iniciar las animaciones
-                                }
-                            }
-                        }}
-                    >
-                        {/* Título animado */}
-                        <motion.h1
-                            className="text-2xl sm:text-3xl font-bold text-tertiary mb-4"
-                            variants={textVariants}
-                        >
-                            Bienvenido a la Carrera de
-                        </motion.h1>
-                        <motion.h1
-                            className="text-4xl sm:text-5xl font-bold text-tertiary mb-4"
-                            variants={textVariants}
-                        >
-                            Medicina Veterinaria y Zootecnia
-                        </motion.h1>
-                        {/* Descripción animada */}
-                        <motion.p
-                            className="text-gray-700 text-lg sm:text-xl mt-4"
-                            variants={textVariants}
-                        >
-                            Descubre el mundo de la veterinaria y zootecnia con nosotros. Formamos profesionales comprometidos con la salud animal y el desarrollo sostenible.
-                        </motion.p>
-                    </motion.div>
-
-                    {/* Carrusel de imágenes */}
-                    <motion.div
-                        className="relative w-full h-80 sm:h-96 rounded-3xl overflow-hidden shadow-lg"
-                        key={currentImage}
-                        variants={imageVariants}
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                    >
-                        <img
-                            src={images[currentImage]}
-                            alt="Veterinaria"
-                            className="w-full h-full object-cover"
-                        />
-                        {/* Overlay con efecto de transparencia */}
-                        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* Sección de publicaciones */}
-            <PublicationsPage />
-        </>
-    );
+  return (
+    <>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-gradient-to-r from-secondary via-secondary to-primary"></div>
+      <section className="max-w-screen-xl h-screen flex items-center justify-center mx-auto px-2 md:px-10 xl:text-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
+          <PawPrintsAnimation></PawPrintsAnimation>
+          <div className="w-full">
+            <motion.h3
+              className="text-tertiary text-start md:mt-10 mt-0 lg:text-center text-2xl font-semibold p-4 sm:text-5xl"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              whileHover={{ scale: 1.1 }}
+            >
+              Bienvenido a la <br /> Carrera de Medicina Veterinaria y Zootecnia
+            </motion.h3>
+            <motion.p
+              className="text-primary text-start lg:text-center font-bold text-xl p-4 sm:text-2xl"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
+              Carrera Acreditada
+            </motion.p>
+          </div>
+          <motion.div
+            className="relative w-72 h-56 place-self-center shadow-md md:w-full md:h-96 rounded-3xl md:mt-10 mt-0"
+            key={currentImage}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              scale: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 2 },
+            }}
+          >
+            <Image
+              src={images[currentImage]}
+              alt="Enfermería"
+              objectFit="cover"
+              className="rounded-3xl"
+              layout="fill"
+            />
+          </motion.div>
+        </div>
+      </section>
+      <PublicationsPage />
+      <VideosPage />
+    </>
+  );
 };
 
 export default Welcome;

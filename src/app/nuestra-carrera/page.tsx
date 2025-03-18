@@ -9,16 +9,20 @@ import Header from "@/components/Header";
 import FlipCard from "@/components/FlipCard";
 import MissionVisionPage from "./mision-vision/page";
 import AuthoritiesPage from "./autoridades/page";
+// import { motion } from "framer-motion";
 
+/**
+ * Componente para mostrar información sobre la carrera de enfermería.
+ * Incluye secciones sobre el perfil profesional, campo de trabajo, misión y visión, y autoridades.
+ */
 const AboutPage = () => {
   return (
     <>
-      <section className="max-w-screen-lg mx-auto mt-12 md:mt-20 px-4 md:px-6">
+      <section className="max-w-screen-xl h-full flex flex-col justify-center py-24 mx-auto px-4 md:px-6">
         <Header title="Sobre Nosotros">
           <FontAwesomeIcon icon={faBuilding} className="text-secondary" />
         </Header>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-          {/* Tarjeta 1: Perfil Profesional */}
           <FlipCard
             frontTitle="PERFIL PROFESIONAL"
             frontContent={
@@ -97,7 +101,6 @@ const AboutPage = () => {
           />
 
           <div>
-            {/* Tarjeta 2: Campo de Trabajo Profesional */}
             <FlipCard
               frontTitle="CAMPO DE TRABAJO PROFESIONAL"
               frontContent={
@@ -158,7 +161,6 @@ const AboutPage = () => {
                 </div>
               }
             />
-            {/* Tarjeta 3: Objetivos */}
             <FlipCard
               frontTitle="OBJETIVO GENERAL"
               frontContent={
@@ -177,7 +179,7 @@ const AboutPage = () => {
               backContent={
                 <div className="text-sm">
                   <p>
-                    "Formar profesionales altamente capacitados en Medicina
+                    Formar profesionales altamente capacitados en Medicina
                     Veterinaria y Zootecnia que, mediante la aplicación de
                     conocimientos científicos y técnicos avanzados, sean capaces
                     de diagnosticar, tratar, prevenir y controlar enfermedades
@@ -188,7 +190,7 @@ const AboutPage = () => {
                     del sector pecuario respetando el ecosistema y el bienestar
                     animal, y colaborar en la salud pública mediante la
                     prevención y control de enfermedades zoonóticas y la
-                    garantía de calidad e inocuidad alimentaria."
+                    garantía de calidad e inocuidad alimentaria.
                   </p>
                   <p>
                     Este objetivo es general e integral con la formación en
@@ -203,7 +205,39 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      <MissionVisionPage></MissionVisionPage>
+      <section className="max-w-screen-xl h-full md:h-screen flex flex-col justify-center mx-auto px-4 md:px-6">
+        {/* <motion.p
+          className="text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary mx-auto py-4"
+          initial={{ scale: 0.8, opacity: 0.5 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{
+            duration: 2,
+            delay: 0.5,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+        >
+          Arte, Ciencia y Sabiduría Adelante Enfermería
+        </motion.p> */}
+        <MissionVisionPage></MissionVisionPage>
+
+        {/* <div className="max-w-screen-xl mx-auto flex justify-center mt-12 md:mt-24 px-4 md:px-6">
+          <a
+            href="https://serviciopagina.upea.bo//InstitucionUpea/cf51cb33-2279-40da-8f8a-83915fdf2182.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-flex items-center justify-center px-6 py-3 text-lg font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-full shadow-lg hover:from-secondary hover:to-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 group"
+          >
+            <FontAwesomeIcon
+              icon={faCloudArrowDown}
+              className="w-6 h-6 mr-2 text-white group-hover:scale-110 transition-transform"
+            />
+            Descargar Plan de Estudios
+            <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity rounded-full"></span>
+          </a>
+        </div> */}
+      </section>
       <AuthoritiesPage></AuthoritiesPage>
     </>
   );
